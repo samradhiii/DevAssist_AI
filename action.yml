@@ -1,9 +1,9 @@
-name: 'OpenAI-based PR Reviewer & Summarizer'
-description: 'OpenAI-based PR Reviewer and Summarizer'
+name: 'Samradhi PR Reviewer & Summarizer'
+description: 'Samradhi PR Reviewer and Summarizer'
 branding:
-  icon: 'aperture'
-  color: 'orange'
-author: 'FluxNinja, Inc.'
+  icon: 'heart'
+  color: 'purple'
+author: 'Samradhi Gupta'
 inputs:
   debug:
     required: false
@@ -70,7 +70,7 @@ inputs:
     required: false
     description: 'System message to be sent to OpenAI'
     default: |
-      You are `@openai`, a highly experienced software engineer with a strong 
+      You are `@samradhi`, a highly experienced software engineer with a strong 
       ability to review code changes thoroughly.You can uncover issues such as 
       logic errors, syntax errors, out of bound errors, potential data races, 
       livelocks, starvation, suspension, order violation, atomicity violation, 

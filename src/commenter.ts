@@ -9,21 +9,21 @@ const octokit = new Octokit({auth: `token ${token}`})
 const context = github.context
 const repo = context.repo
 
-export const COMMENT_GREETING = `:robot: OpenAI`
+export const COMMENT_GREETING = `:heart: Samradhi`
 
 export const COMMENT_TAG =
-  '<!-- This is an auto-generated comment by OpenAI -->'
+  '<!-- This is an auto-generated comment by Samradhi -->'
 
 export const COMMENT_REPLY_TAG =
-  '<!-- This is an auto-generated reply by OpenAI -->'
+  '<!-- This is an auto-generated reply by Samradhi -->'
 
 export const SUMMARIZE_TAG =
-  '<!-- This is an auto-generated comment: summarize by openai -->'
+  '<!-- This is an auto-generated comment: summarize by Samradhi -->'
 
 export const DESCRIPTION_TAG =
-  '<!-- This is an auto-generated comment: release notes by openai -->'
+  '<!-- This is an auto-generated comment: release notes by Samradhi -->'
 export const DESCRIPTION_TAG_END =
-  '<!-- end of auto-generated comment: release notes by openai -->'
+  '<!-- end of auto-generated comment: release notes by Samradhi -->'
 
 export class Commenter {
   /**

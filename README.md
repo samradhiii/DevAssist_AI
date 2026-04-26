@@ -1,4 +1,4 @@
-# OpenAI GPT based PR reviewer and summarizer
+# Samradhi GPT based PR reviewer and summarizer
 
 ![AI](./docs/images/ai.png)
 
@@ -9,6 +9,8 @@ Action provides a summary, release notes and review of pull requests. The
 prompts have been tuned for a concise response. To prevent excessive
 notifications, this action can be configured to skip adding review comments when
 the changes look good for the most part.
+
+This action was made with love by **Samradhi Gupta**.
 
 In addition, this action can also reply to the user comments made on the review
 by this action.
@@ -26,7 +28,7 @@ NOTES:
 ## Usage
 
 Add the below file to your repository at
-`.github/workflows/openai-pr-reviewer.yml`
+`.github/workflows/samradhi-pr-reviewer.yml`
 
 ```yaml
 name: Code Review
@@ -51,7 +53,7 @@ jobs:
   review:
     runs-on: ubuntu-latest
     steps:
-      - uses: fluxninja/openai-pr-reviewer@main
+      - uses: samradhi/samradhi-pr-reviewer@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -64,15 +66,15 @@ jobs:
 
 See also: [./action.yml](./action.yml)
 
-### Conversation with OpenAI
+### Conversation with Samradhi
 
 You can reply to a review comment made by this action and get a response based
 on the diff context. Additionally, you can invite the bot to a conversation by
-mentioning it in the beginning of the comment with `@openai`.
+mentioning it in the beginning of the comment with `@samradhi`.
 
 Example:
 
-> @openai Can you please review this block of code?
+> @samradhi Can you please review this block of code?
 
 ### Screenshots
 
@@ -150,7 +152,7 @@ jobs:
   review:
     runs-on: ubuntu-latest
     steps:
-      - uses: fluxninja/openai-pr-reviewer@main
+      - uses: samradhi/samradhi-pr-reviewer@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -161,7 +163,7 @@ jobs:
 See also:
 https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request_target
 
-### Inspect the messages between OpenAI server
+### Conversation with Samradhi
 
 Set `debug: true` in the workflow file to enable debug mode, which will show the
 messages

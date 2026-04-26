@@ -228,7 +228,7 @@ ${filename}: ${summary}
 
 Tips: 
 - Reply on the review comment left by this bot to ask follow-up questions.
-- Invite the bot into a review conversation by typing \`@openai\` in the beginning of the comment.
+- Invite the bot into a review conversation by typing \`@samradhi\` in the beginning of the comment.
 `
 
       next_summarize_ids = summarize_final_response_ids
@@ -244,7 +244,7 @@ Tips:
       core.info('release notes: nothing obtained from openai')
     } else {
       next_summarize_ids = release_notes_ids
-      let message = '### Summary by OpenAI\n\n'
+      let message = '### Summary by Samradhi\n\n'
       message += release_notes_response
       commenter.update_description(context.payload.pull_request.number, message)
     }
@@ -284,7 +284,7 @@ Tips:
                     // TODO: add file level comments via API once it's available
                     // See: https://github.blog/changelog/2023-03-14-comment-on-files-in-a-pull-request-public-beta/
                     // For now comment on the PR itself
-                    const tag = `<!-- openai-review-file-${filename} -->`
+                    const tag = `<!-- samradhi-review-file-${filename} -->`
                     const comment = `${tag}\nReviewing existing code in: ${filename}\n\n${resp}`
                     await commenter.comment(comment, tag, 'replace')
                   }

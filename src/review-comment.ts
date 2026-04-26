@@ -18,7 +18,7 @@ const token = core.getInput('token')
 const octokit = new Octokit({auth: `token ${token}`})
 const context = github.context
 const repo = context.repo
-const ASK_BOT = '@openai'
+const ASK_BOT = '@samradhi'
 
 export const handleReviewComment = async (
   bot: Bot,
@@ -115,7 +115,7 @@ export const handleReviewComment = async (
         if (diffAll.data) {
           const files = diffAll.data.files
           if (files) {
-            const file = files.find(f => f.filename === comment.path)
+            const file = files.find((f: any) => f.filename === comment.path)
             if (file && file.patch) {
               file_diff = file.patch
             }
